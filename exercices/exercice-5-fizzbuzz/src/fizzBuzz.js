@@ -10,7 +10,7 @@ module.exports = class FizzBuzz {
         } else if(number % 5 === 0) {
             return 'Buzz';
         } else {
-            return number;
+            return number.toString();
         }
     }
 
