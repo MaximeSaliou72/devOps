@@ -23,5 +23,4 @@ test('retourne le nombre lui-même pour les autres nombres mais sous forme de ch
     const fizzBuzz = new FizzBuzz();
     expect(fizzBuzz.getMultiple(1)).toBe('1');
     expect(fizzBuzz.getMultiple(19)).toBe('19');
-    // Ajouter d'autres cas de test pour les nombres qui ne sont pas multiples de trois ou de cinq
 });
