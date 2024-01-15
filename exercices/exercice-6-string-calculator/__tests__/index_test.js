@@ -14,3 +14,8 @@ test('Additionne les nombres séparer par une virgule', () => {
     const calculator = new Calculator();
     expect(calculator.add('3,4,2')).toBe(9);
 });
+
+test('Additionne la somme de plusieurs nombres avec virgules et sauts de ligne', () => {
+    const calculator = new Calculator();
+    expect(calculator.add('1,2\n3')).toBe(6);
+});

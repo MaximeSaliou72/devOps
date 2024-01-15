@@ -13,7 +13,6 @@ module.exports = class Calculator {
     }
 
     // Si contient une virgule
-
     if (stringNumber.includes(",")) {
       const numbersArray = stringNumber.split(",");
       const sum = numbersArray.reduce((acc, num) => acc + parseInt(num, 10), 0);
