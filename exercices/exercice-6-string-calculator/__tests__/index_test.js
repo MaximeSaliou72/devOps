@@ -10,7 +10,7 @@ test('retourne un nombre', () => {
     expect(calculator.add('3')).toBe(3);
 });
 
-test('retourne plusieurs nombres séparé par une virgule', () => {
+test('Additionne les nombres séparer par une virgule', () => {
     const calculator = new Calculator();
-    expect(calculator.add('3,4,2')).toEqual([3, 4, 2]);
+    expect(calculator.add('3,4,2')).toBe(9);
 });
