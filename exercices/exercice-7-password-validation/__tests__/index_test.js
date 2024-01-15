@@ -12,6 +12,11 @@ test("Le mot de passe doit contenir au moins 2 chiffres", () => {
     expect(password.passWodrLength("qwertyuiop2")).toBe("Le mot de passe doit contenir au moins 2 chiffres");
 });
 
+test("Doubel Erreur", () => {
+    const password = new Password();
+    expect(password.passWodrLength("qwer2")).toBe("Le mot de passe doit comporter au moins 8 caractères. Le mot de passe doit contenir au moins 2 chiffres");
+});
+
 test("Mot de passe valide", () => {
   const password = new Password();
   expect(password.passWodrLength("qwertyuiop22")).toBe("Mot de passe valide");
