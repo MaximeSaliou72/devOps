@@ -1,4 +1,4 @@
-export default class Calculator {
+module.exports = class Calculator {
     constructor(precision) {
         this.precision = precision;
     }

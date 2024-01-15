@@ -1,12 +1,16 @@
-// require('dotenv').config();
+let dotenv = require('dotenv');
+
+dotenv.config();
+
 module.exports = class Message {
     constructor() {
-        this._lang = 'fr';
+        this._lang = process.env.LANGUAGE;
         this._translates = {
             'fr': 'Bonjour tout le monde!',
             'en': 'Hello World!'
         };
         this._array = [];
+        console.log(process.env.LANGUAGE)
     }
 
     get() {
