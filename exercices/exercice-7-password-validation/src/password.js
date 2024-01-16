@@ -14,6 +14,14 @@ module.exports = class Password {
       errors.push("Le mot de passe doit contenir au moins 2 chiffres");
     }
 
+    if (!/[A-Z]/.test(password)) {
+    return "Le mot de passe doit contenir au moins une lettre majuscule";
+    }
+
+    if (!/[@&#%*?!$]/.test(password)) {
+      return "le mot de passe doit contenir au moins un caractère spécial";
+      }
+
     if (errors.length > 0) {
       return errors.join(". ");
     }
