@@ -21,6 +21,5 @@ module.exports = class Sale {
     if (search === "99999") {
       return("Erreur : code-barres non trouvé")
     }
-    
   }
 };
