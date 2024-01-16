@@ -19,3 +19,8 @@ test("Code barre vide", () => {
   const sale = new Sale();
   expect(sale.searchPrice("")).toBe("Erreur : code-barres vide");
 });
+
+test("Plusieurs code barre", () => {
+  const sale = new Sale();
+  expect(sale.searchPrice("12345, 23456")).toBe("19,75");
+});

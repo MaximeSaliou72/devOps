@@ -1,6 +1,9 @@
 module.exports = class Sale {
   constructor() {
-
+    this.prices = {
+      "12345": 7.25,
+      "23456": 12.50
+    }
   }
 
   searchPrice(search) {
@@ -9,12 +12,10 @@ module.exports = class Sale {
       return "Erreur : code-barres vide";
     }
 
-    if (search === "12345") {
-      return("$7.25")
-    }
+    const price = this.prices[search];
 
-    if (search === "23456") {
-      return("$12.50")
+    if (price !== undefined) {
+      return `$${price.toFixed(2)}`;
     }
 
     if (search === "99999") {
